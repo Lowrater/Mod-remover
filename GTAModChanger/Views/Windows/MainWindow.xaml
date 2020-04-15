@@ -1,0 +1,36 @@
+﻿<Window x:Class="GTAModChanger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Usercontrols="clr-namespace:GTAModChanger.Views.Usercontrols"
+        Icon="/Sources\Ikons\gta_ikon.png"
+        mc:Ignorable="d"
+        Title="GTAV Mod adder/remover" Height="400" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <!-- Grid definitions -->
+        <!-- Column definitions -->
+        <Grid.ColumnDefinitions>
+            <!-- Content paths MIDDLE -->
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Row definitions -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!-- Content bindings -->
+        <!-- Top content - IMAGE -->
+        <Usercontrols:TopContent Grid.Column="0" Grid.Row="0"></Usercontrols:TopContent>
+        <!-- Middle content -->
+        <Usercontrols:MiddelContent Grid.Column="0" Grid.Row="1"></Usercontrols:MiddelContent>
+        <!-- Buttom content -->
+        <Usercontrols:BottomContent Grid.Column="0" Grid.Row="2"></Usercontrols:BottomContent>
+        <!-- Progress bar -->
+        <Usercontrols:ProgressBar Grid.Column="0" Grid.Row="3"></Usercontrols:ProgressBar>
+    </Grid>
+</Window>

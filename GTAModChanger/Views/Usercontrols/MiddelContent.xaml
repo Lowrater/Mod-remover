@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="GTAModChanger.Views.Usercontrols.MiddelContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GTAModChanger.Views.Usercontrols"
+             mc:Ignorable="d" 
+             DataContext="{Binding Middle,Source={StaticResource Locator}}"
+             d:DesignHeight="200" d:DesignWidth="450" Background="White">
+    <Grid>
+        <!-- Grid defintions-->
+        <!-- Column defintions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!-- Row defintions -->
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!-- Middle content - LEFT LABELS -->
+        <Label Content="GTA mod folder" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <Label Content="GTA root folder" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <!-- Middle content - RIGHT FOLDERS -->
+        <!-- GTA mod folder-->
+        <Grid Grid.Column="1" Grid.Row="0">
+            <!-- Grid definitions - GTA mod folders -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <!-- Button and informations -->
+            <!-- Button -->
+            <Button Grid.Column="0" Height="30" Width="110" Command="{Binding GetModFolderStringCommand}">Mod folder</Button>
+            <!-- Folder path -->
+            <TextBox Grid.Column="1" Height="30" Text="{Binding ModFolderString}" ></TextBox>
+        </Grid>
+
+        <!-- GTA Root folder-->
+        <Grid Grid.Column="1" Grid.Row="1">
+            <!-- Grid definitions - GTA mod folders -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <!-- Button and informations -->
+            <!-- Button -->
+            <Button Grid.Column="0" Height="30" Width="110" Command="{Binding GetRootFolderStringCommand}">Root folder</Button>
+            <!-- Folder path -->
+            <TextBox Grid.Column="1" Height="30" Text="{Binding RootFolderString}" ></TextBox>
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="GTAModChanger.Views.Usercontrols.BottomContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GTAModChanger.Views.Usercontrols"
+             mc:Ignorable="d" 
+             DataContext="{Binding Bottom,Source={StaticResource Locator}}"
+             d:DesignHeight="200" d:DesignWidth="450" Background="White">
+    <Grid>
+        <!-- Grid defintions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Row definitions -->
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!-- Content -->
+        <!-- Add mod BTN -->
+        <Button Content="Add mods" Grid.Column="0" Height="30" Width="120" Command="{Binding AddModsCommand}"></Button>
+        <!-- Remove mod BTN-->
+        <Button Content="Remove mods" Grid.Column="2" Height="30" Width="120" Command="{Binding RemoveModsCommand}"></Button>
+
+    </Grid>
+</UserControl>
